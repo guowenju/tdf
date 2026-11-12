@@ -28,7 +28,7 @@ build-backend = "hatchling.build"
 packages = ["src/tdf"]
 
 [dependency-groups]
-dev = ["pytest>=8", "ruff>=0.11", "mypy>=1.15"]
+dev = ["pytest>=9", "ruff>=0.11", "mypy>=1.15"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
