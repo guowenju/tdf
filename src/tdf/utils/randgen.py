@@ -81,7 +81,6 @@ class Rand:
             mark (bool, optional): 默认生成的字符串是否包含标点符号，默认为 False。
         """
 
-        # 选择字符集
         characters = string.ascii_letters + string.digits
 
         if mark:
@@ -89,7 +88,7 @@ class Rand:
 
         sys_random = random.SystemRandom()
 
-        return "".join(sys_random.choice(characters) for _ in range(length))
+        return "".join(sys_random.choices(characters, k=length))
 
     @staticmethod
     def random_hash(len: int | None = None) -> str:
